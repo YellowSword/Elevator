@@ -1,12 +1,14 @@
-package Elevator.Part1;
+package Elevator.NoController;
 
 public class Building {
     private int numFloors;
+    private int capacity;
     private Elevator elevator;
 
-    public Building(int numFloors){
+    public Building(int numFloors, int capacity){
         this.numFloors = numFloors;
-        this.elevator = new Elevator(1, this.numFloors, this);
+        this.capacity = capacity;
+        this.elevator = new Elevator(1, this.numFloors, this.capacity, this);
     }
 
     /**
@@ -18,25 +20,36 @@ public class Building {
      * @return        instance of the elevator to use to go either up or down
      */
     private Elevator call(int fromFloor, boolean goingUp, int riderId){
+        synchronized (this){
+            while(this.elevator.reachedFullCapacity()){
+                try {
+                    System.out.println("Elevator has reached full capacity.");
+                    wait();
+                } catch (InterruptedException e){
+
+                }
+            }
+        }
         if (goingUp){
             System.out.println("Elevator " + this.elevator.getElevatorId() +  " called by rider " + riderId + " on floor " + fromFloor +" to go up");
         } else {
             System.out.println("Elevator " + this.elevator.getElevatorId() +  " called by rider " + riderId + " on floor " + fromFloor +" to go down");
         }
         elevator.requestFloor(fromFloor, goingUp, riderId);
-//        while(elevator.isGoingUp() != goingUp){
-//            elevator.pass();
-//            synchronized (this){
-//                while(elevator.isDoorOpen()){
-//                    try {
-//                        wait();
-//                    } catch (InterruptedException e){
-//
-//                    }
-//                }
-//            }
-//            elevator.requestFloor(fromFloor, goingUp, riderId);
-//        }
+        while(elevator.isGoingUp() != goingUp){
+            elevator.pass();
+            synchronized (this){
+                while(elevator.isDoorOpen()){
+                    try {
+                        System.out.println("Elevator is not going in the right direction.");
+                        wait();
+                    } catch (InterruptedException e){
+
+                    }
+                }
+            }
+            elevator.requestFloor(fromFloor, goingUp, riderId);
+        }
 
         return elevator;
     }

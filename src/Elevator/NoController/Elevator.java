@@ -1,9 +1,8 @@
-package Elevator.Part1;
+package Elevator.NoController;
 
 import java.util.TreeSet;
 
 import static java.lang.Thread.interrupted;
-import static java.lang.Thread.sleep;
 
 public class Elevator implements Runnable {
 
@@ -11,6 +10,7 @@ public class Elevator implements Runnable {
     private int numFloors;
     private int currentFloor;
     private int numRiders;
+    private int capacity;
     private boolean isGoingUp;
     private boolean isDoorOpen;
     private Building building;
@@ -20,11 +20,12 @@ public class Elevator implements Runnable {
     private Thread thread;
 
 
-    public Elevator(int id, int numFloors, Building building){
+    public Elevator(int id, int numFloors, int capacity, Building building){
         this.elevatorId = id;
         this.numFloors = numFloors;
         this.currentFloor = -1;
         this.numRiders = 0;
+        this.capacity = capacity;
         this.isGoingUp = true;
         this.isDoorOpen = false;
         this.building = building;
@@ -42,32 +43,16 @@ public class Elevator implements Runnable {
         return this.thread;
     }
 
+    public boolean reachedFullCapacity(){
+        return this.numRiders == this.capacity;
+    }
+
     public boolean isGoingUp(){
         return this.isGoingUp;
     }
 
     public boolean isDoorOpen(){
         return this.isDoorOpen;
-    }
-
-    public int getCurrentFloor(){
-        return this.currentFloor;
-    }
-
-    public int getNumFloors(){
-        return this.numFloors;
-    }
-
-    public int getTotalRequests(){
-        return this.upRequests.size() + this.downRequests.size();
-    }
-
-    public int getNumUpRequests(){
-        return this.upRequests.size();
-    }
-
-    public int getNumDownRequests(){
-        return this.downRequests.size();
     }
 
     public int getElevatorId(){
@@ -89,12 +74,6 @@ public class Elevator implements Runnable {
         }
 
         this.floors[this.currentFloor].raise(this.elevatorId, this.currentFloor);
-//
-//        try {
-//            sleep(50);
-//        } catch (InterruptedException e){
-//            this.floors[this.currentFloor].raise(this.elevatorId, this.currentFloor);
-//        }
     }
 
     /**

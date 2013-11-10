@@ -1,14 +1,18 @@
-package Elevator.Part1;
+package Elevator.NoController;
 
 public class Rider implements Runnable {
 
     private int riderId;
     private Building building;
+    private int startFloor;
+    private int stopFloor;
     private Thread thread;
 
-    public Rider(int riderId, Building building){
+    public Rider(int riderId, Building building, int startFloor, int stopFloor){
         this.riderId = riderId;
         this.building = building;
+        this.startFloor = startFloor;
+        this.stopFloor = stopFloor;
         this.thread = new Thread(this, ""+this.riderId);
     }
 
@@ -21,10 +25,6 @@ public class Rider implements Runnable {
     }
 
     public void run(){
-        int riderId = 1;
-        int startFloor = 4;
-        int stopFloor = 0;
-
         Elevator elevator;
         while(true){
             if(startFloor < stopFloor){
