@@ -1,4 +1,4 @@
-package Elevator.NoController;
+package Elevator;
 
 import java.util.TreeSet;
 

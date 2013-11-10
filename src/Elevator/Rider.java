@@ -1,4 +1,4 @@
-package Elevator.NoController;
+package Elevator;
 
 public class Rider implements Runnable {
 

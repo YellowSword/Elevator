@@ -1,4 +1,4 @@
-package Elevator.NoController;
+package Elevator;
 
 public class EventBarrier {
     private int waiters;
