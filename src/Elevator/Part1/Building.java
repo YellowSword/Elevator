@@ -18,21 +18,26 @@ public class Building {
      * @return        instance of the elevator to use to go either up or down
      */
     private Elevator call(int fromFloor, boolean goingUp, int riderId){
-        System.out.println("Elevator called");
-        elevator.requestFloor(fromFloor, goingUp, riderId);
-        while(elevator.isGoingUp() != goingUp){
-            elevator.pass();
-            synchronized (this){
-                while(elevator.isDoorOpen()){
-                    try {
-                        wait();
-                    } catch (InterruptedException e){
-
-                    }
-                }
-            }
-            elevator.requestFloor(fromFloor, goingUp, riderId);
+        if (goingUp){
+            System.out.println("Elevator " + this.elevator.getElevatorId() +  " called by rider " + riderId + " on floor " + fromFloor +" to go up");
+        } else {
+            System.out.println("Elevator " + this.elevator.getElevatorId() +  " called by rider " + riderId + " on floor " + fromFloor +" to go down");
         }
+        elevator.requestFloor(fromFloor, goingUp, riderId);
+//        while(elevator.isGoingUp() != goingUp){
+//            elevator.pass();
+//            synchronized (this){
+//                while(elevator.isDoorOpen()){
+//                    try {
+//                        wait();
+//                    } catch (InterruptedException e){
+//
+//                    }
+//                }
+//            }
+//            elevator.requestFloor(fromFloor, goingUp, riderId);
+//        }
+
         return elevator;
     }
 
