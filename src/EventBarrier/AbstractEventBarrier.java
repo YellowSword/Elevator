@@ -1,3 +1,4 @@
+package EventBarrier;
 
 public abstract class AbstractEventBarrier {
 

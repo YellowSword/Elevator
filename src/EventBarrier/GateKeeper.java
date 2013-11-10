@@ -1,10 +1,5 @@
-/**
- * Created with IntelliJ IDEA.
- * User: bitsbytesnblues
- * Date: 11/2/13
- * Time: 10:23 PM
- * To change this template use File | Settings | File Templates.
- */
+package EventBarrier;
+
 public class GateKeeper implements Runnable {
 
     private String name;
