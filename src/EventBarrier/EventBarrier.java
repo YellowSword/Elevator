@@ -54,7 +54,7 @@ public class EventBarrier extends AbstractEventBarrier {
             System.out.println("There are no more minstrels waiting to cross the bridge...");
             notify();
         } else if(this.waiters == 1){
-            System.out.println(this.waiters + " minstrel left are waiting to cross the bridge...");
+            System.out.println(this.waiters + " minstrel left is waiting to cross the bridge...");
         } else {
             System.out.println(this.waiters + " minstrels left are waiting to cross the bridge...");
         }
