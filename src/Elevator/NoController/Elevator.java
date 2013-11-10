@@ -3,6 +3,7 @@ package Elevator.NoController;
 import java.util.TreeSet;
 
 import static java.lang.Thread.interrupted;
+import static java.lang.Thread.sleep;
 
 public class Elevator implements Runnable {
 
@@ -184,6 +185,7 @@ public class Elevator implements Runnable {
                 return next;
             } else {
                 this.isGoingUp = false;
+                this.currentFloor = floors.length;
                 next = this.downRequests.lower(this.currentFloor);
                 boolean hasNextRequestFromLowerFloor = next != null;
                 if (hasNextRequestFromLowerFloor){
@@ -201,6 +203,7 @@ public class Elevator implements Runnable {
                 return next;
             } else {
                 this.isGoingUp = true;
+                this.currentFloor = -1;
                 next = this.upRequests.higher(this.currentFloor);
                 boolean hasNextRequestFromHigherFloor = next != null;
                 if (hasNextRequestFromHigherFloor){
