@@ -11,7 +11,7 @@ public class Elevator implements Runnable {
     private int numFloors;
     private int currentFloor;
     private int numRiders;
-    private int capacity;
+    private int elevatorCapacity;
     private boolean isGoingUp;
     private boolean isDoorOpen;
     private Building building;
@@ -21,12 +21,12 @@ public class Elevator implements Runnable {
     private Thread thread;
 
 
-    public Elevator(int id, int numFloors, int capacity, Building building){
+    public Elevator(int id, int numFloors, int elevatorCapacity, Building building){
         this.elevatorId = id;
         this.numFloors = numFloors;
         this.currentFloor = -1;
         this.numRiders = 0;
-        this.capacity = capacity;
+        this.elevatorCapacity = elevatorCapacity;
         this.isGoingUp = true;
         this.isDoorOpen = false;
         this.building = building;
@@ -45,7 +45,7 @@ public class Elevator implements Runnable {
     }
 
     public boolean reachedFullCapacity(){
-        return this.numRiders == this.capacity;
+        return this.numRiders == this.elevatorCapacity;
     }
 
     public boolean isGoingUp(){
@@ -77,7 +77,7 @@ public class Elevator implements Runnable {
     }
 
     /**
-     * When capacity is reached or the outgoing riders are exited and
+     * When elevatorCapacity is reached or the outgoing riders are exited and
      * incoming riders are in.
      */
     public void closedDoors(){
@@ -107,10 +107,6 @@ public class Elevator implements Runnable {
             System.out.println("Elevator " + this.elevatorId + " has moved down to floor " + this.currentFloor);
         }
     }
-
-    /**
-     * Elevator rider interface (part 1): invoked by rider threads.
-     */
 
     /**
      * Enter the elevator

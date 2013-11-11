@@ -19,19 +19,19 @@ NetId: yl179
 elevator.log
 README
 
-Elevator
--Building.java
--Elevator.java
--EventBarrier.java
--Main.java
--Rider.java
-
 EventBarrier
--AbstractEventBarrier.java
+-AbstractEventBarrier.java (given template API)
 -EventBarrier.java
 -GateKeeper.java
 -Main.java
 -Minstrel.java
+
+Elevator
+-Building.java
+-Elevator.java
+-EventBarrier.java (modified from the previous one)
+-Main.java
+-Rider.java
 
 #######################
 #Implementation Details
@@ -74,15 +74,27 @@ elevator and tries to enter the elevator when the elevator has not arrived at it
 blocks the rider thread when it is inside the elevator and tries to exit the elevator when the elevator has not arrived
 at its destination floor.
 
-The elevator thread loops until it has fulfilled all the rider thread requests.
+The elevator threads loops until it has fulfilled all the rider thread requests.
 
+Resource scheduling for multiple elevators works like the following.
+
+When a rider calls an elevator to go either up or down, the elevator that is going in the direction of the rider's
+current location will respond to the rider's call. If the elevator that responds first is full, then the rider will
+will wait for the next elevator that has room. If the elevator is going in the opposite direction that the rider wants to go,
+the rider will also wait for the next elevator that is going in the rider's intended direction. If elevators are not
+servicing requests, then a random elevator will be selected for the rider.
+
+An elevator's work queue is divided up based on the up and down direction. After an elevator has completed a request,
+it will service the next closest floor in the same direction as that of the last request. Once the elevator has fulfilled
+requests for one direction, it will change direction and start servicing requests for the other direction.
 
 ##########
 #Feedback
 ##########
-I thought that the lab was fairly difficult because this was my first project with multi-threaded programming.
-It took a long time just to implement part 1 and part 2 of the elevator and it would have been nice to have
-received some more implementation details on the elevator and gone over the details of resource scheduling in lecture.
+I thought that the lab was fairly difficult because this was my first project with multi-threaded programming. It took
+me a long time to implement the elevator because I had to learn different scheduling techniques on my own. I decided
+to work alone for this lab because I have been out of town a lot for job interviews and had difficulty coordinating
+with classmates to schedule group work times.
 
 
 

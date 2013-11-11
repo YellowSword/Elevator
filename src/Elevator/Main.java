@@ -1,45 +1,87 @@
 package Elevator;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        int numFloors = 0;
+        int numElevators = 0;
+        int numRiders = 0;
+        int elevatorCapacity = 0;
+        List<Rider> riderList = new ArrayList<Rider>();
+
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter integer for number of floors in building: ");
+        try {
+            numFloors = Integer.parseInt(bufferedReader.readLine());
+        } catch (NumberFormatException e){
+            System.err.println("Invalid number format!");
+        }
+        System.out.print("Enter integer for number of elevators in building: ");
+        try {
+            numElevators = Integer.parseInt(bufferedReader.readLine());
+        } catch (NumberFormatException e){
+            System.err.println("Invalid number format!");
+        }
+        System.out.print("Enter integer for number of riders in building: ");
+        try {
+            numRiders = Integer.parseInt(bufferedReader.readLine());
+        } catch (NumberFormatException e){
+            System.err.println("Invalid number format!");
+        }
+        System.out.print("Enter integer for number of riders elevator can fit: ");
+        try {
+            elevatorCapacity = Integer.parseInt(bufferedReader.readLine());
+        } catch (NumberFormatException e){
+            System.err.println("Invalid number format!");
+        }
+
+        bufferedReader.close();
+
+        System.out.println();
+        System.out.println("Your inputs");
+        System.out.println("-----------");
+        System.out.println("Number of floors in building: "  + numFloors);
+        System.out.println("Number of elevators: " + numElevators);
+        System.out.println("Number of riders: " + numRiders);
+        System.out.println("Max number of riders in elevator: " + elevatorCapacity);
+
 //        File log = new File("elevator.log");
 //        System.setOut(new PrintStream(new FileOutputStream(log)));
 
-        Building building = new Building(5, 5, 3);
-        Rider rider1 = new Rider(1, building, 2, 4);
-        Rider rider2 = new Rider(2, building, 2, 4);
-        Rider rider3 = new Rider(3, building, 1, 4);
-        Rider rider4 = new Rider(4, building, 2, 3);
-        Rider rider5 = new Rider(5, building, 3, 4);
-        Rider rider6 = new Rider(6, building, 4, 0);
-        Rider rider7 = new Rider(7, building, 2, 3);
-        Rider rider8 = new Rider(8, building, 3, 0);
-        Rider rider9 = new Rider(9, building, 0, 2);
-        rider1.getThread().start();
-        rider2.getThread().start();
-        rider3.getThread().start();
-        rider4.getThread().start();
-        rider5.getThread().start();
-        rider6.getThread().start();
-        rider7.getThread().start();
-        rider8.getThread().start();
-        rider9.getThread().start();
-        building.startElevators();
-        rider1.getThread().join();
-        rider2.getThread().join();
-        rider3.getThread().join();
-        rider4.getThread().join();
-        rider5.getThread().join();
-        rider6.getThread().join();
-        rider7.getThread().join();
-        rider8.getThread().join();
-        rider9.getThread().join();
-        building.stopElevators();
+        Building building = new Building(numFloors, elevatorCapacity, numElevators);
+
+        Random startFloor = new Random();
+        Random stopFloor = new Random();
+        for (int i = 0; i < numRiders; i++){
+            Rider rider = new Rider(i, building, startFloor.nextInt(numFloors), stopFloor.nextInt(numFloors));
+            riderList.add(rider);
+        }
+
+        //Start rider threads
+        for (Rider rider : riderList){
+            rider.getThread().start();
+        }
+
+        //Start elevators
+        for (Elevator elevator : building.getElevators()){
+            elevator.getThread().start();
+        }
+
+        //Wait for rider threads to terminate
+        for (Rider rider : riderList){
+            rider.getThread().join();
+        }
+
+        //Stop elevators
+        for (Elevator elevator : building.getElevators()){
+            elevator.getThread().interrupt();
+        }
+
     }
 }

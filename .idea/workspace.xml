@@ -2,30 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5119ea7-1597-4586-bed9-f1a475ee5d01" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Elevator/Controller.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Elevator/Building.java" afterPath="$PROJECT_DIR$/src/Elevator/Building.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Elevator/Elevator.java" afterPath="$PROJECT_DIR$/src/Elevator/Elevator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Elevator/Main.java" afterPath="$PROJECT_DIR$/src/Elevator/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventBarrier/Main.java" afterPath="$PROJECT_DIR$/src/EventBarrier/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Elevator/Rider.java" afterPath="$PROJECT_DIR$/src/Elevator/Rider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elevator.log" afterPath="$PROJECT_DIR$/elevator.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Building.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384205619420" ignored="false" />
-    <file path="/Elevator.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384206468063" ignored="false" />
+    <file path="/Building.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384211131085" ignored="false" />
+    <file path="/Elevator.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384209502540" ignored="false" />
     <file path="/AbstractEventBarrier.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384060143489" ignored="false" />
     <file path="/EventBarrier.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384117751992" ignored="false" />
     <file path="/EventBarrierDemo.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384060677798" ignored="false" />
     <file path="/Minstrel.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384060371529" ignored="false" />
-    <file path="/Main.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384205695261" ignored="false" />
+    <file path="/Main.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384211463353" ignored="false" />
     <file path="/Rider.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384200840035" ignored="false" />
     <file path="/ElevatorController.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384065941390" ignored="false" />
-    <file path="/Dummy.txt" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384199433619" ignored="false" />
+    <file path="/Dummy.txt" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384213465620" ignored="false" />
     <file path="/Controller.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384122413099" ignored="false" />
     <file path="/fragment.java" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384123212145" ignored="false" />
-    <file path="/README" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384131280634" ignored="false" />
+    <file path="/README" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384212906335" ignored="false" />
+    <file path="/elevator.log" changelist="e5119ea7-1597-4586-bed9-f1a475ee5d01" time="1384211164776" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -76,7 +77,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,10 +89,8 @@
       <file leaf-file-name="Building.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Elevator/Building.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="27" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="97" column="34" selection-start="3218" selection-end="3218" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,16 +98,7 @@
       <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Elevator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Elevator/Elevator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="69" selection-start="5277" selection-end="5277" vertical-scroll-proportion="4.721689">
+            <state line="89" column="0" selection-start="4108" selection-end="4108" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,16 +107,46 @@
       <file leaf-file-name="Rider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Elevator/Rider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="40" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+            <state line="5" column="83" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Elevator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="67" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="10" column="76" selection-start="247" selection-end="247" vertical-scroll-proportion="-1.927928">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#384#391#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventBarrier/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="63" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventBarrier.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventBarrier/EventBarrier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="0" selection-start="1963" selection-end="1963" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Minstrel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventBarrier/Minstrel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="93" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,9 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Elevator/Part1/Main.java" />
-        <option value="$PROJECT_DIR$/src/Elevator/Part1/Rider.java" />
-        <option value="$PROJECT_DIR$/src/Elevator/Part1/Controller.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Part1/Elevator.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Part1/Building.java" />
         <option value="$PROJECT_DIR$/src/Elevator/NoController/Building.java" />
@@ -162,11 +178,14 @@
         <option value="$PROJECT_DIR$/src/Elevator/NoController/Main.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Controller.java" />
         <option value="$PROJECT_DIR$/src/EventBarrier/EventBarrierDemo.java" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/src/Elevator/Main.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Rider.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Building.java" />
         <option value="$PROJECT_DIR$/src/Elevator/Elevator.java" />
+        <option value="$PROJECT_DIR$/elevator.log" />
+        <option value="$PROJECT_DIR$/src/EventBarrier/Main.java" />
+        <option value="$PROJECT_DIR$/src/EventBarrier/Minstrel.java" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/Elevator/Main.java" />
       </list>
     </option>
   </component>
@@ -202,6 +221,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,19 +279,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -303,19 +322,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -341,6 +347,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -405,7 +424,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -415,13 +434,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.846543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.73434854" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.60913706" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39086294" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -494,10 +513,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/EventBarrier/Minstrel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="93" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Elevator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="24" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#391#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -508,23 +537,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventBarrier/Minstrel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="31" selection-start="158" selection-end="158" vertical-scroll-proportion="0.15957446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EventBarrier/GateKeeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="70" selection-end="160" vertical-scroll-proportion="0.10638298">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventBarrier/EventBarrier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1963" selection-end="1963" vertical-scroll-proportion="1.7166979">
           <folding />
         </state>
       </provider>
@@ -543,61 +558,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventBarrier/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="538" selection-end="538" vertical-scroll-proportion="0.3180212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/lang/InterruptedException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="73" selection-start="710" selection-end="710" vertical-scroll-proportion="0.46296296">
+        <state line="38" column="73" selection-start="710" selection-end="710" vertical-scroll-proportion="0.46296296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventBarrier/Minstrel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="93" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elevator.log">
+    <entry file="file://$PROJECT_DIR$/src/EventBarrier/EventBarrier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6535434">
+        <state line="61" column="0" selection-start="1963" selection-end="1963" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Elevator/Rider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.0">
+        <state line="5" column="83" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Elevator/Building.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="27" selection-start="3363" selection-end="3363" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="97" column="34" selection-start="3218" selection-end="3218" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Elevator/Main.java">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="67" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+        <state line="89" column="0" selection-start="4108" selection-end="4108" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Elevator/Elevator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="69" selection-start="5277" selection-end="5277" vertical-scroll-proportion="4.721689">
+        <state line="103" column="40" selection-start="3193" selection-end="3193" vertical-scroll-proportion="1.5646259">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elevator.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventBarrier/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="63" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Elevator/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="76" selection-start="247" selection-end="247" vertical-scroll-proportion="-1.927928">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#391#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
