@@ -19,4 +19,83 @@ NetId: yl179
 elevator.log
 README
 
+Elevator
+-Building.java
+-Elevator.java
+-EventBarrier.java
+-Main.java
+-Rider.java
+
+EventBarrier
+-AbstractEventBarrier.java
+-EventBarrier.java
+-GateKeeper.java
+-Main.java
+-Minstrel.java
+
+#######################
+#Implementation Details
+#######################
+
+************
+EventBarrier
+************
+EventBarrier runs from the Main.java class in the EventBarrier folder.
+
+An EventBarrier represents a sequence of event occurrences through time. Minstrels are the consumer threads that
+arrive at the barrier to wait for the next event. The gatekeeper is the producer thread that stands watch
+over the barrier and signals the minstrels when an event takes place.
+
+Minstrels arrive at the bridge to wait for the next event, i.e. the drawbridge being lowered. The gatekeeper will raise
+the event: the gatekeeper will signal the minstrels that the drawbridge has been lowered so that all the minstrels will
+wake up, respond to the event by crossing the drawbridge, and then notify the gatekeeper that their handling of the event
+has been complete when they have reached the other side of the bridge. If a minstrel arrives when the drawbridge has
+already been lowered (i.e. event in progress), then it will cross the bridge (it will arrive immediately without blocking
+and respond to the event in progress).
+
+The EventBarrier uses a simple boolean to keep a record of its internal state and remember that an event is in progress.
+The event is the lowering of the drawbridge so that the waiting minstrels can cross.
+
+********
+Elevator
+********
+Elevator runs from the Main.java class in the Elevator folder.
+
+Each rider thread is initiated with a start and stopping floor. Depending on where the rider is going, the rider
+thread calls building.callUp() or building.callDown() and blocks until the elevator arrives on the floor that the rider is on.
+The rider thread wakes after the elevator arrives on its starting floor and then subsequently calls elevator.enter()
+after it has crossed the EventBarrier to enter the elevator. Once the rider thread is inside the elevator, it calls
+elevator.requestFloor() to tell the elevator where it wants to go and then blocks again until the elevator has arrived at
+the rider thread's intended destination. Once the elevator arrives at the rider thread's destination floor, the rider
+thread will call elevator.exit() to recross the eventBarrier in order to exit the elevator.
+
+An EventBarrier represents each floor of the building. The eventBarrier blocks the rider thread when it is outside of the
+elevator and tries to enter the elevator when the elevator has not arrived at its starting floor. The eventBarrier also
+blocks the rider thread when it is inside the elevator and tries to exit the elevator when the elevator has not arrived
+at its destination floor.
+
+The elevator thread loops until it has fulfilled all the rider thread requests.
+
+I spent a lot of time debugging the program, and ran out of time to implement the resource scheduling part of the lab.
+In essence, multiple elevators in a building would be controlled by the Controller.java class so that multiple elevators
+would operate optimally to fulfill the requests of the rider threads and to avoid deadlock and starvation. The elevator
+controller would be controlling the pool and queue of events (building.callUp/building.callDown as called by the rider
+threads) and returning the best elevator to fulfill a rider thread's request). Essentially the controller needs to
+minimize service time, maximize fairness, and minimize work done. The easiest schedule to implement is first come first served
+and will not result in starvation because every request is serviced, but a FCFS policy will not be efficient.
+
+##########
+#Feedback
+##########
+I thought that the lab was fairly difficult because this was my first project with multi-threaded programming.
+It took a long time just to implement part 1 and part 2 of the elevator and it would have been nice to have
+received some more implementation details on the elevator and gone over the details of resource scheduling in lecture.
+
+
+
+
+
+
+
+
 

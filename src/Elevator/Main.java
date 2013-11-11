@@ -1,8 +1,15 @@
 package Elevator;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+        File log = new File("elevator.log");
+        System.setOut(new PrintStream(new FileOutputStream(log)));
 
         Building building = new Building(5, 5);
         Rider rider1 = new Rider(1, building, 2, 4);
