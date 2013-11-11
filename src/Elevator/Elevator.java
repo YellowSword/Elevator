@@ -73,7 +73,6 @@ public class Elevator implements Runnable {
         } else {
             System.out.println("Floor " + this.currentFloor + " has " + numWaiters + " riders waiting on elevator " + this.elevatorId);
         }
-
         this.floors[this.currentFloor].raise(this.elevatorId, this.currentFloor);
     }
 
@@ -218,8 +217,11 @@ public class Elevator implements Runnable {
 
     public void run(){
         while(true){
+            if(interrupted()) return;
+
             int nextFloor = getNextFloor();
             boolean noMoreRequests = upRequests.isEmpty() && downRequests.isEmpty();
+
             if (noMoreRequests){
                 synchronized (this){
                     currentFloor = -1;
@@ -236,7 +238,6 @@ public class Elevator implements Runnable {
                 openDoors();
                 closedDoors();
             }
-            if(interrupted()) return;
         }
     }
 }

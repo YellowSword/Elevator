@@ -35,11 +35,11 @@ public class Building {
         } else {
             System.out.println("Elevator " + this.elevator.getElevatorId() +  " called by rider " + riderId + " on floor " + fromFloor +" to go down");
         }
-        elevator.requestFloor(fromFloor, goingUp, riderId);
-        while(elevator.isGoingUp() != goingUp){
-            elevator.pass();
+        this.elevator.requestFloor(fromFloor, goingUp, riderId);
+        while(this.elevator.isGoingUp() != goingUp){
+            this.elevator.pass();
             synchronized (this){
-                while(elevator.isDoorOpen()){
+                while(this.elevator.isDoorOpen()){
                     try {
                         System.out.println("Elevator is not going in the right direction.");
                         wait();
@@ -48,10 +48,10 @@ public class Building {
                     }
                 }
             }
-            elevator.requestFloor(fromFloor, goingUp, riderId);
+            this.elevator.requestFloor(fromFloor, goingUp, riderId);
         }
 
-        return elevator;
+        return this.elevator;
     }
 
     /**
