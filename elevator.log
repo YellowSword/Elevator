@@ -1,61 +1,32 @@
 Rider 1 wants to go up from floor 2
-Rider 5 wants to go up from floor 3
-Rider 4 wants to go up from floor 2
-Rider 3 wants to go up from floor 1
 Rider 2 wants to go up from floor 2
-Rider 9 wants to go up from floor 0
-Rider 7 wants to go up from floor 2
-Elevator 1 called by rider 3 on floor 1 to go up
-Rider 8 wants to go down from floor 3
-Elevator 1 called by rider 4 on floor 2 to go up
-Elevator 1 called by rider 5 on floor 3 to go up
 Elevator 1 called by rider 1 on floor 2 to go up
-Rider 6 wants to go down from floor 4
-Elevator 1 called by rider 8 on floor 3 to go down
-Elevator 1 called by rider 7 on floor 2 to go up
-Elevator 1 called by rider 9 on floor 0 to go up
-Elevator is waiting for rider requests
 Elevator 1 called by rider 2 on floor 2 to go up
-Elevator 1 called by rider 6 on floor 4 to go down
-Elevator receives request from rider 9 to go up to floor 0
-Elevator receives request from rider 7 to go up to floor 2
-1 rider waiting for elevator 1 on floor 2
-1 rider waiting for elevator 1 on floor 0
-Elevator receives request from rider 8 to go down to floor 3
-1 rider waiting for elevator 1 on floor 3
 Elevator receives request from rider 1 to go up to floor 2
+Elevator receives request from rider 2 to go up to floor 2
+Rider 3 wants to go up from floor 1
+1 rider waiting for elevator 1 on floor 2
+Elevator 1 called by rider 3 on floor 1 to go up
 2 riders waiting for elevator 1 on floor 2
-Elevator receives request from rider 5 to go up to floor 3
-2 riders waiting for elevator 1 on floor 3
-Elevator receives request from rider 4 to go up to floor 2
-3 riders waiting for elevator 1 on floor 2
 Elevator receives request from rider 3 to go up to floor 1
 1 rider waiting for elevator 1 on floor 1
-Elevator receives request from rider 6 to go down to floor 4
-1 rider waiting for elevator 1 on floor 4
-Elevator receives request from rider 2 to go up to floor 2
+Rider 4 wants to go up from floor 2
+Elevator 1 called by rider 4 on floor 2 to go up
+Elevator receives request from rider 4 to go up to floor 2
+3 riders waiting for elevator 1 on floor 2
+Rider 7 wants to go up from floor 2
+Elevator 1 called by rider 7 on floor 2 to go up
+Elevator receives request from rider 7 to go up to floor 2
 4 riders waiting for elevator 1 on floor 2
-Elevator going down processes request from rider to go up to floor 0
-Elevator will move up to floor 0
-Elevator has moved up to floor 0
-Elevator opens doors on floor 0
-Floor 0 has 1 rider waiting on elevator 1
-Elevator 1 doors are opened on floor 0
-Elevator 1 is waiting for riders to enter door on floor 0
-Elevator 1 called
-Rider 9 enters elevator on floor 0
-There are no more riders waiting for elevator 1 on floor 0
-Rider 9 has entered elevator 1
-Elevator 1 is closing door on floor 0
-Elevator 1 doors closed on 0
+Rider 5 wants to go up from floor 3
+Elevator 1 called by rider 5 on floor 3 to go up
+Elevator receives request from rider 5 to go up to floor 3
+1 rider waiting for elevator 1 on floor 3
 Elevator going up processes request from rider to go up to floor 1
 Elevator will move up to floor 1
 Elevator has moved up to floor 1
-Rider 9 on elevator 1 wants to go to floor 2
 Elevator opens doors on floor 1
-Elevator receives request from rider 9 to go up to floor 2
 Floor 1 has 1 rider waiting on elevator 1
-5 riders waiting for elevator 1 on floor 2
 Elevator 1 doors are opened on floor 1
 Elevator 1 is waiting for riders to enter door on floor 1
 Elevator 1 called
@@ -64,19 +35,28 @@ There are no more riders waiting for elevator 1 on floor 1
 Rider 3 has entered elevator 1
 Rider 3 on elevator 1 wants to go to floor 4
 Elevator receives request from rider 3 to go up to floor 4
-2 riders waiting for elevator 1 on floor 4
+1 rider waiting for elevator 1 on floor 4
+Rider 6 wants to go down from floor 4
 Elevator 1 is closing door on floor 1
+Rider 9 wants to go up from floor 0
+Rider 8 wants to go down from floor 3
+Elevator 1 called by rider 9 on floor 0 to go up
 Elevator 1 doors closed on 1
+Elevator 1 called by rider 6 on floor 4 to go down
+Elevator receives request from rider 9 to go up to floor 0
+Elevator 1 called by rider 8 on floor 3 to go down
+1 rider waiting for elevator 1 on floor 0
+Elevator receives request from rider 8 to go down to floor 3
+2 riders waiting for elevator 1 on floor 3
+Elevator receives request from rider 6 to go down to floor 4
+2 riders waiting for elevator 1 on floor 4
 Elevator going up processes request from rider to go up to floor 2
 Elevator will move up to floor 2
 Elevator has moved up to floor 2
 Elevator opens doors on floor 2
-Floor 2 has 5 riders waiting on elevator 1
+Floor 2 has 4 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 2
 Elevator 1 is waiting for riders to enter door on floor 2
-Rider 9 exits elevator 1 on floor 2
-Rider 9 has exited elevator on floor 2
-4 riders left waiting to enter elevator 1on floor 2
 Elevator 1 called
 Elevator 1 called
 Elevator 1 called
@@ -88,24 +68,24 @@ Rider 4 enters elevator on floor 2
 Rider 7 on elevator 1 wants to go to floor 3
 2 riders left waiting to enter elevator 1on floor 2
 Rider 4 has entered elevator 1
-Rider 1 enters elevator on floor 2
+Rider 2 enters elevator on floor 2
 Rider 4 on elevator 1 wants to go to floor 3
 1 rider left waiting to enter elevator 1on floor 2
-Rider 1 has entered elevator 1
-Rider 2 enters elevator on floor 2
-Rider 1 on elevator 1 wants to go to floor 4
-There are no more riders waiting for elevator 1 on floor 2
 Rider 2 has entered elevator 1
-Elevator 1 is closing door on floor 2
-Elevator receives request from rider 1 to go up to floor 4
-Elevator 1 doors closed on 2
+Rider 1 enters elevator on floor 2
 Rider 2 on elevator 1 wants to go to floor 4
+There are no more riders waiting for elevator 1 on floor 2
+Rider 1 has entered elevator 1
+Elevator 1 is closing door on floor 2
+Elevator receives request from rider 2 to go up to floor 4
+Elevator 1 doors closed on 2
+Rider 1 on elevator 1 wants to go to floor 4
 Elevator receives request from rider 4 to go up to floor 3
 3 riders waiting for elevator 1 on floor 4
 Elevator receives request from rider 7 to go up to floor 3
 3 riders waiting for elevator 1 on floor 3
-Elevator receives request from rider 2 to go up to floor 4
 4 riders waiting for elevator 1 on floor 3
+Elevator receives request from rider 1 to go up to floor 4
 4 riders waiting for elevator 1 on floor 4
 Elevator going up processes request from rider to go up to floor 3
 Elevator will move up to floor 3
@@ -115,93 +95,110 @@ Floor 3 has 4 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 3
 Elevator 1 is waiting for riders to enter door on floor 3
 Rider 7 exits elevator 1 on floor 3
-3 riders left waiting to enter elevator 1on floor 3
-Elevator 1 called
-Rider 4 exits elevator 1 on floor 3
-Elevator is not going in the right direction.
 Rider 7 has exited elevator on floor 3
-2 riders left waiting to enter elevator 1on floor 3
+Rider 4 exits elevator 1 on floor 3
+3 riders left waiting to enter elevator 1on floor 3
 Rider 4 has exited elevator on floor 3
-1 rider left waiting to enter elevator 1on floor 3
+Elevator 1 called
+2 riders left waiting to enter elevator 1on floor 3
+Elevator 1 called
 Rider 5 enters elevator on floor 3
-There are no more riders waiting for elevator 1 on floor 3
+1 rider left waiting to enter elevator 1on floor 3
 Rider 5 has entered elevator 1
 Rider 5 on elevator 1 wants to go to floor 4
-Elevator 1 is closing door on floor 3
-Elevator 1 doors closed on 3
 Elevator receives request from rider 5 to go up to floor 4
 5 riders waiting for elevator 1 on floor 4
+Rider 8 enters elevator on floor 3
+There are no more riders waiting for elevator 1 on floor 3
+Rider 8 has entered elevator 1
+Rider 8 on elevator 1 wants to go to floor 0
+Elevator receives request from rider 8 to go down to floor 0
+2 riders waiting for elevator 1 on floor 0
+Elevator 1 is closing door on floor 3
+Elevator 1 doors closed on 3
 Elevator going up processes request from rider to go up to floor 4
 Elevator will move up to floor 4
-Elevator receives request from rider 8 to go down to floor 3
-1 rider waiting for elevator 1 on floor 3
 Elevator has moved up to floor 4
 Elevator opens doors on floor 4
 Floor 4 has 5 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 4
 Elevator 1 is waiting for riders to enter door on floor 4
 Rider 5 exits elevator 1 on floor 4
+Rider 5 has exited elevator on floor 4
 4 riders left waiting to enter elevator 1on floor 4
-Elevator is not going in the right direction.
-Rider 3 exits elevator 1 on floor 4
 Rider 1 exits elevator 1 on floor 4
 Rider 2 exits elevator 1 on floor 4
-Rider 5 has exited elevator on floor 4
-3 riders left waiting to enter elevator 1on floor 4
-Rider 2 has exited elevator on floor 4
-2 riders left waiting to enter elevator 1on floor 4
+Rider 3 exits elevator 1 on floor 4
+Elevator 1 called
 Rider 1 has exited elevator on floor 4
-1 rider left waiting to enter elevator 1on floor 4
+3 riders left waiting to enter elevator 1on floor 4
 Rider 3 has exited elevator on floor 4
+2 riders left waiting to enter elevator 1on floor 4
+Rider 2 has exited elevator on floor 4
+1 rider left waiting to enter elevator 1on floor 4
+Rider 6 enters elevator on floor 4
 There are no more riders waiting for elevator 1 on floor 4
+Rider 6 has entered elevator 1
+Rider 6 on elevator 1 wants to go to floor 0
+Elevator receives request from rider 6 to go down to floor 0
+3 riders waiting for elevator 1 on floor 0
 Elevator 1 is closing door on floor 4
 Elevator 1 doors closed on 4
-Elevator receives request from rider 6 to go down to floor 4
-1 rider waiting for elevator 1 on floor 4
 Elevator going up processes request from rider to go down to floor 4
 Elevator will move up to floor 4
 Elevator has moved down to floor 4
 Elevator opens doors on floor 4
-Floor 4 has 1 rider waiting on elevator 1
+Floor 4 has 0 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 4
-Elevator 1 is waiting for riders to enter door on floor 4
-Elevator 1 called
-Rider 6 enters elevator on floor 4
-There are no more riders waiting for elevator 1 on floor 4
-Rider 6 has entered elevator 1
 Elevator 1 is closing door on floor 4
 Elevator 1 doors closed on 4
-Rider 6 on elevator 1 wants to go to floor 0
 Elevator going down processes request from rider to go down to floor 3
 Elevator will move up to floor 3
-Elevator receives request from rider 6 to go down to floor 0
-1 rider waiting for elevator 1 on floor 0
 Elevator has moved down to floor 3
 Elevator opens doors on floor 3
-Floor 3 has 1 rider waiting on elevator 1
+Floor 3 has 0 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 3
-Elevator 1 is waiting for riders to enter door on floor 3
-Elevator 1 called
-Rider 8 enters elevator on floor 3
-There are no more riders waiting for elevator 1 on floor 3
-Rider 8 has entered elevator 1
 Elevator 1 is closing door on floor 3
-Rider 8 on elevator 1 wants to go to floor 0
-Elevator receives request from rider 8 to go down to floor 0
-2 riders waiting for elevator 1 on floor 0
 Elevator 1 doors closed on 3
 Elevator going down processes request from rider to go down to floor 0
 Elevator will move up to floor 0
 Elevator has moved down to floor 0
 Elevator opens doors on floor 0
-Floor 0 has 2 riders waiting on elevator 1
+Floor 0 has 3 riders waiting on elevator 1
 Elevator 1 doors are opened on floor 0
 Elevator 1 is waiting for riders to enter door on floor 0
-Rider 8 exits elevator 1 on floor 0
-Rider 8 has exited elevator on floor 0
 Rider 6 exits elevator 1 on floor 0
-1 rider left waiting to enter elevator 1on floor 0
+Rider 8 exits elevator 1 on floor 0
+Elevator 1 called
 Rider 6 has exited elevator on floor 0
+2 riders left waiting to enter elevator 1on floor 0
+Rider 8 has exited elevator on floor 0
+1 rider left waiting to enter elevator 1on floor 0
+Rider 9 enters elevator on floor 0
 There are no more riders waiting for elevator 1 on floor 0
+Rider 9 has entered elevator 1
+Rider 9 on elevator 1 wants to go to floor 2
+Elevator receives request from rider 9 to go up to floor 2
+1 rider waiting for elevator 1 on floor 2
 Elevator 1 is closing door on floor 0
 Elevator 1 doors closed on 0
+Elevator going down processes request from rider to go up to floor 0
+Elevator will move up to floor 0
+Elevator has moved up to floor 0
+Elevator opens doors on floor 0
+Floor 0 has 0 riders waiting on elevator 1
+Elevator 1 doors are opened on floor 0
+Elevator 1 is closing door on floor 0
+Elevator 1 doors closed on 0
+Elevator going up processes request from rider to go up to floor 2
+Elevator will move up to floor 2
+Elevator has moved up to floor 2
+Elevator opens doors on floor 2
+Floor 2 has 1 rider waiting on elevator 1
+Elevator 1 doors are opened on floor 2
+Elevator 1 is waiting for riders to enter door on floor 2
+Rider 9 exits elevator 1 on floor 2
+Rider 9 has exited elevator on floor 2
+There are no more riders waiting for elevator 1 on floor 2
+Elevator 1 is closing door on floor 2
+Elevator 1 doors closed on 2

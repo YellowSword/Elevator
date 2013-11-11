@@ -76,13 +76,6 @@ at its destination floor.
 
 The elevator thread loops until it has fulfilled all the rider thread requests.
 
-I spent a lot of time debugging the program, and ran out of time to implement the resource scheduling part of the lab.
-In essence, multiple elevators in a building would be controlled by the Controller.java class so that multiple elevators
-would operate optimally to fulfill the requests of the rider threads and to avoid deadlock and starvation. The elevator
-controller would be controlling the pool and queue of events (building.callUp/building.callDown as called by the rider
-threads) and returning the best elevator to fulfill a rider thread's request). Essentially the controller needs to
-minimize service time, maximize fairness, and minimize work done. The easiest schedule to implement is first come first served
-and will not result in starvation because every request is serviced, but a FCFS policy will not be efficient.
 
 ##########
 #Feedback

@@ -95,15 +95,16 @@ public class Elevator implements Runnable {
      */
     public synchronized void visitFloor(int floor){
         if (this.isGoingUp){
-            upRequests.remove(floor);
+            this.upRequests.remove(floor);
         } else {
-            downRequests.remove(floor);
+            this.downRequests.remove(floor);
         }
+        this.building.removeStop(floor, this.isGoingUp);
         this.currentFloor = floor;
         if(this.isGoingUp){
-            System.out.println("Elevator has moved up to floor " + this.currentFloor);
+            System.out.println("Elevator " + this.elevatorId + " has moved up to floor " + this.currentFloor);
         } else {
-            System.out.println("Elevator has moved down to floor " + this.currentFloor);
+            System.out.println("Elevator " + this.elevatorId + " has moved down to floor " + this.currentFloor);
         }
     }
 
@@ -160,15 +161,16 @@ public class Elevator implements Runnable {
     public void requestFloor(int floorRequested, boolean goingUp, int riderId){
         synchronized (this){
             if(goingUp){
-                upRequests.add(floorRequested);
-                System.out.println("Elevator receives request from rider " + riderId + " to go up to floor " + floorRequested);
+                this.upRequests.add(floorRequested);
+                System.out.println("Elevator " + this.elevatorId + " receives request from rider " + riderId + " to go up to floor " + floorRequested);
             } else {
-                downRequests.add(floorRequested);
-                System.out.println("Elevator receives request from rider " + riderId + " to go down to floor " + floorRequested);
+                this.downRequests.add(floorRequested);
+                System.out.println("Elevator " + this.elevatorId + " receives request from rider " + riderId + " to go down to floor " + floorRequested);
             }
+            this.building.addStop(floorRequested, goingUp, this);
             notifyAll();
         }
-        floors[floorRequested].arrive(this.elevatorId, floorRequested, riderId);
+        this.floors[floorRequested].arrive(this.elevatorId, floorRequested, riderId);
     }
 
     /**
@@ -180,15 +182,15 @@ public class Elevator implements Runnable {
             Integer next = this.upRequests.higher(this.currentFloor);
             boolean hasNext = next != null;
             if (hasNext){
-                System.out.println("Elevator going up processes request from rider to go up to floor " + next);
+                System.out.println("Elevator " + this.elevatorId + " going up processes request from rider to go up to floor " + next);
                 return next;
             } else {
                 this.isGoingUp = false;
-                this.currentFloor = floors.length;
+                this.currentFloor = this.floors.length;
                 next = this.downRequests.lower(this.currentFloor);
                 boolean hasNextRequestFromLowerFloor = next != null;
                 if (hasNextRequestFromLowerFloor){
-                    System.out.println("Elevator going up processes request from rider to go down to floor " + next);
+                    System.out.println("Elevator " + this.elevatorId + " going up processes request from rider to go down to floor " + next);
                     return next;
                 } else {
                     return -1;
@@ -198,7 +200,7 @@ public class Elevator implements Runnable {
             Integer next = this.downRequests.lower(this.currentFloor);
             boolean hasNext = next != null;
             if (hasNext){
-                System.out.println("Elevator going down processes request from rider to go down to floor " + next);
+                System.out.println("Elevator " + this.elevatorId + " going down processes request from rider to go down to floor " + next);
                 return next;
             } else {
                 this.isGoingUp = true;
@@ -206,7 +208,7 @@ public class Elevator implements Runnable {
                 next = this.upRequests.higher(this.currentFloor);
                 boolean hasNextRequestFromHigherFloor = next != null;
                 if (hasNextRequestFromHigherFloor){
-                    System.out.println("Elevator going down processes request from rider to go up to floor " + next);
+                    System.out.println("Elevator " + this.elevatorId + "  going down processes request from rider to go up to floor " + next);
                     return next;
                 } else {
                     return -1;
@@ -220,20 +222,20 @@ public class Elevator implements Runnable {
             if(interrupted()) return;
 
             int nextFloor = getNextFloor();
-            boolean noMoreRequests = upRequests.isEmpty() && downRequests.isEmpty();
+            boolean noMoreRequests = this.upRequests.isEmpty() && this.downRequests.isEmpty();
 
             if (noMoreRequests){
                 synchronized (this){
-                    currentFloor = -1;
+                    this.currentFloor = -1;
                     try {
-                        System.out.println("Elevator is waiting for rider requests");
+                        System.out.println("Elevator " + this.elevatorId + " is waiting for rider requests");
                         wait();
                     } catch (InterruptedException e){
                         return;
                     }
                 }
             } else if (nextFloor != -1){
-                System.out.println("Elevator will move up to floor " + nextFloor);
+                System.out.println("Elevator " + this.elevatorId + " will move up to floor " + nextFloor);
                 visitFloor(nextFloor);
                 openDoors();
                 closedDoors();

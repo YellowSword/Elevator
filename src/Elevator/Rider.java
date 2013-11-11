@@ -20,10 +20,6 @@ public class Rider implements Runnable {
         return this.thread;
     }
 
-    public int getRiderId(){
-        return this.riderId;
-    }
-
     public void run(){
         Elevator elevator;
         while(true){
@@ -34,7 +30,7 @@ public class Rider implements Runnable {
                 System.out.println("Rider " + this.riderId + " wants to go down from floor " + startFloor);
                 elevator = building.callDown(startFloor, riderId);
             }
-            System.out.println("Elevator " + elevator.getElevatorId() + " called");
+            System.out.println("Rider " + this.riderId + " is about to enter elevator " + elevator.getElevatorId());
 
             if (elevator.enter(this.riderId)){
                 System.out.println("Rider " + this.riderId + " has entered elevator " + elevator.getElevatorId());

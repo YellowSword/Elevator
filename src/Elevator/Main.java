@@ -8,10 +8,10 @@ import java.io.PrintStream;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
-        File log = new File("elevator.log");
-        System.setOut(new PrintStream(new FileOutputStream(log)));
+//        File log = new File("elevator.log");
+//        System.setOut(new PrintStream(new FileOutputStream(log)));
 
-        Building building = new Building(5, 5);
+        Building building = new Building(5, 5, 3);
         Rider rider1 = new Rider(1, building, 2, 4);
         Rider rider2 = new Rider(2, building, 2, 4);
         Rider rider3 = new Rider(3, building, 1, 4);
@@ -30,7 +30,7 @@ public class Main {
         rider7.getThread().start();
         rider8.getThread().start();
         rider9.getThread().start();
-        building.startElevator();
+        building.startElevators();
         rider1.getThread().join();
         rider2.getThread().join();
         rider3.getThread().join();
@@ -40,6 +40,6 @@ public class Main {
         rider7.getThread().join();
         rider8.getThread().join();
         rider9.getThread().join();
-        building.stopElevator();
+        building.stopElevators();
     }
 }
