@@ -5,6 +5,8 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("Launching EventBarrier...");
+        System.out.println();
 
         Random random = new Random();
 
@@ -28,6 +30,4 @@ public class Main {
 
         gateKeeper.getThread().interrupt();
     }
-
-
 }

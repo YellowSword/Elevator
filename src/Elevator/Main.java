@@ -8,6 +8,9 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, IOException {
+        System.out.println("Launching Elevator");
+        System.out.println();
+
         int numFloors = 0;
         int numElevators = 0;
         int numRiders = 0;
